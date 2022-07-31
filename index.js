@@ -25,7 +25,7 @@ const {PORT} = process.env
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(async() => {
-  server.listen(PORT, () => {
+  server.listen(process.env.PORT, () => {
     console.log('%s listening at ${PORT}'); // eslint-disable-line no-console
   });
  await getDiets() 
